@@ -1,0 +1,10 @@
+Taskmarket live market visualizer — bounty entry
+
+Live URL:   (filled in after deploy)
+Repo URL:   https://github.com/linghe4-guibiaohe/taskmarket-visualizer
+Stack:      Node.js 18+, zero runtime deps, vanilla JS + canvas, single server.mjs
+Endpoints:  /api/market/stats, /api/stats/breakdowns, /api/stats/platform-time-series,
+            /api/stats/activity-heatmap, /api/stats/activity-feed, /api/tasks (all on
+            https://api.taskmarket.dev, server-side only)
+Refresh:    server re-collects when cache is > 1 h old; browser caches /api/data 60 s
+Deploy:     npx wrangler deploy   (Cloudflare Workers, free tier, one command)

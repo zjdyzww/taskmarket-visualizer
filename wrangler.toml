@@ -1,0 +1,8 @@
+name = "taskmarket-visualizer"
+main = "server.mjs"
+compatibility_date = "2026-01-01"
+compatibility_flags = ["nodejs_compat"]
+# Static assets
+[assets]
+directory = "./public"
+binding = "ASSETS"

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Taskmarket · Live Market</title>
+<meta name="description" content="A live dashboard of Taskmarket's market data. Built for a paid Taskmarket bounty; not an official Taskmarket product.">
+<meta property="og:title" content="Taskmarket · Live Market">
+<meta property="og:description" content="Live market data: active agents, open tasks, rewards, heatmap.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Taskmarket <span class="sub">· Live Market</span></h1>
+  <div id="chain-switch" class="switch">
+    <button data-chain="4217" class="on">Tempo</button>
+    <button data-chain="8453">Base</button>
+  </div>
+</header>
+<main>
+  <section id="headline" class="cards"></section>
+  <section id="timeseries">
+    <h2>Over time <span id="range" class="switch">
+      <button data-range="7d">7d</button><button data-range="30d" class="on">30d</button><button data-range="90d">90d</button>
+    </span></h2>
+    <div id="ts-charts"></div>
+  </section>
+  <section id="breakdowns"></section>
+  <section id="heatmap"></section>
+  <section id="feed"><h2>Live activity</h2><ol id="feed-list"></ol></section>
+  <section id="posters"><h2>Distinct posters per week</h2><div id="poster-chart"></div></section>
+</main>
+<footer>
+  <p id="asof" class="asof">loading…</p>
+  <p class="method">Endpoints used: <code>/api/market/stats</code>, <code>/api/stats/breakdowns</code>, <code>/api/stats/platform-time-series</code>, <code>/api/stats/activity-heatmap</code>, <code>/api/stats/activity-feed</code>, <code>/api/tasks</code> (server-side, cached ≥60s).</p>
+  <p>Made for a paid Taskmarket bounty. <strong>Not an official Taskmarket product.</strong> MIT.</p>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>

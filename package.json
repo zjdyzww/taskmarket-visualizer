@@ -1,0 +1,14 @@
+{
+  "name": "taskmarket-visualizer",
+  "version": "1.0.0",
+  "description": "Live market dashboard for Taskmarket (built for a paid Taskmarket bounty)",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "node server.mjs",
+    "start": "node server.mjs",
+    "build": "node scripts/build.mjs",
+    "deploy": "echo 'deploy: see notes.txt for one-command deploy'"
+  },
+  "engines": { "node": ">=18" }
+}
